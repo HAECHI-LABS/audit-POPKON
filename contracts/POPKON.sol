@@ -31,7 +31,7 @@ contract POPKON is
     {
         require(
             to != address(0),
-            "PICO/transfer : Should not send to zero address"
+            "transfer : Should not send to zero address"
         );
         _transfer(msg.sender, to, amount);
         success = true;
@@ -47,7 +47,7 @@ contract POPKON is
     {
         require(
             to != address(0),
-            "PICO/transferFrom : Should not send to zero address"
+            "transferFrom : Should not send to zero address"
         );
         _transfer(from, to, amount);
         _approve(
@@ -65,7 +65,7 @@ contract POPKON is
     {
         require(
             spender != address(0),
-            "PICO/approve : Should not approve zero address"
+            "approve : Should not approve zero address"
         );
         _approve(msg.sender, spender, amount);
         success = true;
